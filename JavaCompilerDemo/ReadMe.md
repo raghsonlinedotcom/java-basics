@@ -1,4 +1,4 @@
-# Compiler Vs Interpretor 
+# Compiler Vs Interpreter 
 
 A compiler is a tool/software that converts the whole source code at one shot from the high level programming language (like English) to the intermediate language (bytecode in Java).
 

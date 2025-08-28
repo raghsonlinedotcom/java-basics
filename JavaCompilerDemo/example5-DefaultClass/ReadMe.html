@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>ReadMe</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<section id="readme" class="level2">
+<h2>ReadMe</h2>
+<section id="java-class-is-declared-without-any-access-modifier-but-the-filename-is-intact" class="level3">
+<h3>Java class is declared without any access modifier, but the filename is intact</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">raghavan.muthu@Raghavans-MacBook-Pro</span> example5-DefaultClass % pwd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">/Users/raghavan.muthu/raghs/study/javapgms/basics/compilerDemo/example5-DefaultClass</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">raghavan.muthu@Raghavans-MacBook-Pro</span> example5-DefaultClass % ls <span class="at">-ltrh</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">total</span> 16</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">-rw-r--r--</span>  1 raghavan.muthu  staff   2.0K 27 Aug 16:03 ReadMe.md</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ex">-rw-r--r--</span>  1 raghavan.muthu  staff   107B 27 Aug 16:04 HelloWorld.java</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="ex">raghavan.muthu@Raghavans-MacBook-Pro</span> example5-DefaultClass % bat HelloWorld.java </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ex">───────┬───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>       <span class="ex">│</span> File: HelloWorld.java</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="ex">───────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>   <span class="ex">1</span>   │ class HelloWorld</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>   <span class="ex">2</span>   │ {</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>   <span class="ex">3</span>   │     public static void main<span class="er">(</span><span class="ex">String...</span> args<span class="kw">)</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>   <span class="ex">4</span>   │     {</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>   <span class="ex">5</span>   │         System.out.println<span class="er">(</span><span class="st">&quot;Hello World!&quot;</span><span class="kw">);</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>   <span class="ex">6</span>   │     }</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>   <span class="ex">7</span>   │ }</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>   <span class="ex">8</span>   │ </span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ex">───────┴───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</span></span></code></pre></div>
+<ul>
+<li>The Java class is declared without any access modifier like <code>public</code>, <code>protected</code> etc., hence having the default access</li>
+<li>The source file naming convention is intact - as though the class was declared with <code>public</code> access (<code>HelloWorld.java</code>)</li>
+</ul>
+<section id="attempt-to-compile-the-file" class="level4">
+<h4>Attempt to compile the file</h4>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">raghavan.muthu@Raghavans-MacBook-Pro</span> example5-DefaultClass % javac HelloWorld.java </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">raghavan.muthu@Raghavans-MacBook-Pro</span> example5-DefaultClass % </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">raghavan.muthu@Raghavans-MacBook-Pro</span> example5-DefaultClass % ls <span class="at">-ltrh</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">total</span> 24</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">-rw-r--r--</span>  1 raghavan.muthu  staff   2.0K 27 Aug 16:03 ReadMe.md</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="ex">-rw-r--r--</span>  1 raghavan.muthu  staff   107B 27 Aug 16:04 HelloWorld.java</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="ex">-rw-r--r--</span>  1 raghavan.muthu  staff   426B 27 Aug 16:04 HelloWorld.class</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="ex">raghavan.muthu@Raghavans-MacBook-Pro</span> example5-DefaultClass % </span></code></pre></div>
+<blockquote>
+<p><em>Note</em>: The compilation with <code>javac</code> was successful. Though there is no access modifer to the class ,and there is <em>No mandate</em> that the source file name should exactly match with the Classname (similar to the class declared with public access), ), there is nothing wrong if the source file has an exact match with the classname, and that is what has happened in this case.</p>
+</blockquote>
+<blockquote>
+<p><em>Example</em>: We are expected to go in formal dress to the college/office, and we are not needed to follow the same rule inside the home. However, there is no harm if we dress up formally at home.</p>
+</blockquote>
+</section>
+</section>
+<section id="explanation" class="level3">
+<h3>Explanation</h3>
+<p>The class did not have any access modifier - <code>public</code> , <code>protected</code> etc., Hence it is class with <code>default</code> access.</p>
+<p>The Java Compiler does not mandate any rule for the filename - as opposed to the filename being declared with the <code>public</code> keyword. Hence it compiled the source file successfully.</p>
+</section>
+<section id="rename-the-source-file-compilerdemo.java-but-the-class-name-is-intact-helloworld" class="level3">
+<h3>Rename the source file <code>CompilerDemo.java</code> but the class name is intact <code>HelloWorld</code></h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">raghavan.muthu@Raghavans-MacBook-Pro</span> example5-DefaultClass % cp HelloWorld.java CompilerDemo.java</span></code></pre></div>
+<section id="list-the-files-in-the-directory" class="level4">
+<h4>List the files in the directory</h4>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">raghavan.muthu@Raghavans-MacBook-Pro</span> example5-DefaultClass % ls <span class="at">-ltrh</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">total</span> 32</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ex">-rw-r--r--</span>  1 raghavan.muthu  staff   107B 27 Aug 16:04 HelloWorld.java</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="ex">-rw-r--r--</span>  1 raghavan.muthu  staff   426B 27 Aug 16:04 HelloWorld.class</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ex">-rw-r--r--</span>  1 raghavan.muthu  staff   2.6K 27 Aug 16:06 ReadMe.md</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="ex">-rw-r--r--</span>  1 raghavan.muthu  staff   107B 27 Aug 16:06 CompilerDemo.java</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="ex">raghavan.muthu@Raghavans-MacBook-Pro</span> example5-DefaultClass % bat CompilerDemo.java </span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="ex">───────┬───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>       <span class="ex">│</span> File: CompilerDemo.java</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="ex">───────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>   <span class="ex">1</span>   │ class HelloWorld</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>   <span class="ex">2</span>   │ {</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>   <span class="ex">3</span>   │     public static void main<span class="er">(</span><span class="ex">String...</span> args<span class="kw">)</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>   <span class="ex">4</span>   │     {</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>   <span class="ex">5</span>   │         System.out.println<span class="er">(</span><span class="st">&quot;Hello World!&quot;</span><span class="kw">);</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>   <span class="ex">6</span>   │     }</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>   <span class="ex">7</span>   │ }</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>   <span class="ex">8</span>   │ </span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="ex">───────┴───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</span></span></code></pre></div>
+<blockquote>
+<p><em>Note</em>: The class does not have any access modifier/specifier like <code>public</code>, <code>protected</code> etc., However, the source file name is totally different - <code>CompilerDemo.java</code></p>
+</blockquote>
+</section>
+<section id="verifying-the-.class-files-in-the-folder" class="level4">
+<h4>Verifying the <code>.class</code> files in the folder</h4>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">raghavan.muthu@Raghavans-MacBook-Pro</span> example5-DefaultClass % ls <span class="at">-ltrh</span> <span class="pp">*</span>.class</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">-rw-r--r--</span>  1 raghavan.muthu  staff   426B 27 Aug 16:04 HelloWorld.class</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">raghavan.muthu@Raghavans-MacBook-Pro</span> example5-DefaultClass % ls <span class="at">-ltrh</span> CompilerDemo.class</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="ex">ls:</span> CompilerDemo.class: No such file or directory</span></code></pre></div>
+<blockquote>
+<p><em>Note</em>: There was only one <code>.class</code> file for <code>HelloWorld.class</code> and there is NOT <code>.class</code> file for the <code>CompilerDemo</code> in the directory.</p>
+</blockquote>
+</section>
+<section id="attempt-to-compile-the-source-code-with-the-new-name" class="level4">
+<h4>Attempt to compile the source code with the new name</h4>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">raghavan.muthu@Raghavans-MacBook-Pro</span> example5-DefaultClass % javac CompilerDemo.java </span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">raghavan.muthu@Raghavans-MacBook-Pro</span> example5-DefaultClass % </span></code></pre></div>
+<blockquote>
+<p><em>Note</em>: As expected, the <code>javac</code> (Java Compiler) had successfully compiled the source code/file. Because there is no rule for the source file to match with the class name (in exact case) since the class does <em>NOT</em> have any access modifier.</p>
+</blockquote>
+<p>In such case, the source file name can be <em>anything</em> - as long as it has the valid/allowed characters.</p>
+<p>The <code>javac</code> command did not produce anything in the terminal/console, proving that the compilation was succesful.</p>
+</section>
+<section id="list-the-files-in-the-directory---including-the-generated-.class-file" class="level4">
+<h4>List the files in the directory - including the generated <code>.class</code> file</h4>
+<div class="sourceCode" id="cb7"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">raghavan.muthu@Raghavans-MacBook-Pro</span> example5-DefaultClass % ls <span class="at">-ltrh</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">total</span> 32</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ex">-rw-r--r--</span>  1 raghavan.muthu  staff   107B 27 Aug 16:04 HelloWorld.java</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="ex">-rw-r--r--</span>  1 raghavan.muthu  staff   2.6K 27 Aug 16:06 ReadMe.md</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="ex">-rw-r--r--</span>  1 raghavan.muthu  staff   107B 27 Aug 16:06 CompilerDemo.java</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="ex">-rw-r--r--</span>  1 raghavan.muthu  staff   428B 27 Aug 16:07 HelloWorld.class</span></code></pre></div>
+<blockquote>
+<p><em>Note</em>: Though the <code>javac</code> has successfully compiled the source file, but the generated <code>.class</code> file has the name of the class and NOT the source file.</p>
+</blockquote>
+<p>Here the class name is <code>HelloWorld</code> and the source file name is <code>CompilerDemo.java</code>.</p>
+<ul>
+<li>If you expected the <code>.class</code> file to be <code>CompilerDemo.class</code>, it is <em>WRONG</em>.</li>
+<li>The actual <code>.class</code> file generated is of the same class name -&gt; <code>HelloWorld.class</code>, because we are compiling ONLY the classes and NOT the files. (<em>A Java class inside the source file - is what being compiled</em>).</li>
+</ul>
+<blockquote>
+<p><em>Note</em>: You can also see the the timestamp of the <code>HelloWorld.class</code> has been modified with the current timestamp (<code>27 Aug 16:07</code>)</p>
+</blockquote>
+</section>
+</section>
+<section id="yet-another-attempt-to-demonstrate---by-renaming-the-sourcefile-to-something-different-arbitrary" class="level3">
+<h3>Yet another attempt to demonstrate - by renaming the SourceFile to something different / arbitrary</h3>
+<div class="sourceCode" id="cb8"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">raghavan.muthu@Raghavans-MacBook-Pro</span> example5-DefaultClass % cp CompilerDemo.java Raghavan.java</span></code></pre></div>
+<p>We have copied the source file from <code>CompilerDemo.java</code> to <code>Raghavan.java</code> -&gt; just to take <em>any</em> name.</p>
+<section id="verifying-the-files-in-the-directory" class="level4">
+<h4>Verifying the files in the directory</h4>
+<div class="sourceCode" id="cb9"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">raghavan.muthu@Raghavans-MacBook-Pro</span> example5-DefaultClass % ls <span class="at">-ltrh</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ex">total</span> 40</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="ex">-rw-r--r--</span>  1 raghavan.muthu  staff   107B 27 Aug 16:04 HelloWorld.java</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="ex">-rw-r--r--</span>  1 raghavan.muthu  staff   2.6K 27 Aug 16:06 ReadMe.md</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="ex">-rw-r--r--</span>  1 raghavan.muthu  staff   107B 27 Aug 16:06 CompilerDemo.java</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="ex">-rw-r--r--</span>  1 raghavan.muthu  staff   428B 27 Aug 16:07 HelloWorld.class</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="ex">-rw-r--r--</span>  1 raghavan.muthu  staff   107B 27 Aug 16:09 Raghavan.java</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="ex">raghavan.muthu@Raghavans-MacBook-Pro</span> example5-DefaultClass % bat Raghavan.java </span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="ex">───────┬───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>       <span class="ex">│</span> File: Raghavan.java</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="ex">───────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>   <span class="ex">1</span>   │ class HelloWorld</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>   <span class="ex">2</span>   │ {</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>   <span class="ex">3</span>   │     public static void main<span class="er">(</span><span class="ex">String...</span> args<span class="kw">)</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>   <span class="ex">4</span>   │     {</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>   <span class="ex">5</span>   │         System.out.println<span class="er">(</span><span class="st">&quot;Hello World!&quot;</span><span class="kw">);</span></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>   <span class="ex">6</span>   │     }</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>   <span class="ex">7</span>   │ }</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>   <span class="ex">8</span>   │ </span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="ex">───────┴───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</span></span></code></pre></div>
+<blockquote>
+<p><em>Note</em>: We could see that there are 3 source files - <code>HelloWorld.java</code> (original file), and the renamed files - <code>CompileDemo.java</code> and the recent one <code>Raghavan.java</code> - <em>all of them</em> having the <em>same class</em> <code>HelloWorld</code>.</p>
+</blockquote>
+</section>
+<section id="attempt-to-compile-the-new-source-file-raghavan.java" class="level4">
+<h4>Attempt to compile the new source file <code>Raghavan.java</code></h4>
+<div class="sourceCode" id="cb10"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">raghavan.muthu@Raghavans-MacBook-Pro</span> example5-DefaultClass % javac Raghavan.java </span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="ex">raghavan.muthu@Raghavans-MacBook-Pro</span> example5-DefaultClass % </span></code></pre></div>
+<p>As expected, the source file was successfully compiled, because the file name does not matter for the class having the default access modifier.</p>
+</section>
+<section id="verify-the-files-in-the-directory-including-the-generated-.class-file-for-raghavan.java" class="level4">
+<h4>Verify the files in the directory including the generated <code>.class</code> file for <code>Raghavan.java</code></h4>
+<div class="sourceCode" id="cb11"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">raghavan.muthu@Raghavans-MacBook-Pro</span> example5-DefaultClass % ls <span class="at">-ltrh</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="ex">total</span> 40</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="ex">-rw-r--r--</span>  1 raghavan.muthu  staff   107B 27 Aug 16:04 HelloWorld.java</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="ex">-rw-r--r--</span>  1 raghavan.muthu  staff   2.6K 27 Aug 16:06 ReadMe.md</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="ex">-rw-r--r--</span>  1 raghavan.muthu  staff   107B 27 Aug 16:06 CompilerDemo.java</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="ex">-rw-r--r--</span>  1 raghavan.muthu  staff   107B 27 Aug 16:09 Raghavan.java</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="ex">-rw-r--r--</span>  1 raghavan.muthu  staff   424B 27 Aug 16:09 HelloWorld.class</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="ex">raghavan.muthu@Raghavans-MacBook-Pro</span> example5-DefaultClass % </span></code></pre></div>
+<blockquote>
+<p><em>Note</em>: Again, as explained above, the generated <code>.class</code> file has the name of the class <code>HelloWorld</code> - as <code>HelloWorld.class</code>, and <em>NOT</em> the source file name - like <code>Raghavan.class</code>.</p>
+</blockquote>
+<p>Repeat, we are compiling the class inside the source file and <em>NOT</em> the source file itself.</p>
+<blockquote>
+<p><em>Note</em>: You can also see the the timestamp of the <code>HelloWorld.class</code> has been modified with the current timestamp (<code>27 Aug 16:09</code>)</p>
+</blockquote>
+</section>
+<section id="attempt-to-execute-the-filename-without-extension" class="level4">
+<h4>Attempt to execute the filename without extension</h4>
+<div class="sourceCode" id="cb12"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">raghavan.muthu@Raghavans-MacBook-Pro</span> example5-DefaultClass % java Raghavan</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Error:</span> Could not find or load main class Raghavan</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Caused</span> by: java.lang.ClassNotFoundException: Raghavan</span></code></pre></div>
+<blockquote>
+<p><em>Note</em>: Here we are trying to execute a class named <em>Raghavan</em>, but we do NOT have any clas with the name <code>Raghavan</code>. Because the class name is <code>HelloWorld</code> - though the file names are different.</p>
+</blockquote>
+</section>
+<section id="executing-the-class-with-the-right-name" class="level4">
+<h4>Executing the class with the right name</h4>
+<div class="sourceCode" id="cb13"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">raghavan.muthu@Raghavans-MacBook-Pro</span> example5-DefaultClass % java HelloWorld </span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Hello</span> World!</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="ex">raghavan.muthu@Raghavans-MacBook-Pro</span> example5-DefaultClass %</span></code></pre></div>
+<blockquote>
+<p><em>Note</em>: Now, the attempt to execute the class with the right name was successful.</p>
+</blockquote>
+</section>
+</section>
+</section>
+</body>
+</html>
